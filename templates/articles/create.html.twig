@@ -1,0 +1,8 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+<h1> Articles - Add </h1>
+{% include "articles/navbar.html.twig" %}
+    {{ form(form, {'action': path('article_store'), 'method': 'POST'}) }}
+    
+{% endblock %}

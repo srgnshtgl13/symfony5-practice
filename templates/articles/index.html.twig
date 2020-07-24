@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+<h1>Articles</h1>
+{% include "articles/navbar.html.twig" %}
+
+<ul>
+{% if datas|length == 0 %}
+    <p>No data available</p>
+{% endif %}
+{% for data in datas %}
+    <li>{{data.title}}</li>
+{% endfor %}
+<ul>
+    
+{% endblock %}
